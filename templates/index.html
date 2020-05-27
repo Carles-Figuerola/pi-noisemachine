@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Noise Machine </title>
+     <link rel="stylesheet" href="style.css">
+  </head>  
+
+  <body>
+    <div id="banner">
+      <table align="center">
+        <tr>
+          <td>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <form action="/rain" method="post">
+              <input type="image" src="/static/rain.jpg" value="Rain"></input>
+            </form>
+          </td>
+          <td>
+            <form action="/waves" method="post">
+              <input type="image" src="/static/waves.jpg" value="Waves"></input>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <form action="/whitenoise" method="post">
+              <input type="image" src="/static/whitenoise.jpg" value="White Noise"></input>
+            </form>
+          </td>
+            <td>
+            <form action="/stop" method="post">
+              <input type="image" src="/static/stop.jpg" value="Stop"></input>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+

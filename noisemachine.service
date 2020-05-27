@@ -1,0 +1,12 @@
+[Unit]
+Description=Noisemachine webserver
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+WorkingDirectory=/home/pi/src/pi-noisemachine
+ExecStart=/home/pi/src/pi-noisemachine/.venv/bin/uwsgi --socket 0.0.0.0:80 --protocol=http -w noisemachine:app
+
+[Install]
+WantedBy=multi-user.target
+

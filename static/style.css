@@ -1,0 +1,99 @@
+body {
+  background-color:#000;
+}
+
+@media(min-width: 1000px) {
+  .content {
+    width: 500px;
+    margin: auto;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+input[type=submit] {
+  width: 100%;
+  font-size:500%;
+}
+
+input[type=image] {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width:100%
+}
+
+#banner {
+  width:90%
+  text-align:center;
+  border-radius:5px;
+  margin:20px auto auto;
+  padding:50px 0;
+}
+
+table.volume td {
+  width: 100%
+}
+
+.range-value {
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.textcontainer {
+  text-align: right;
+  width: 150px;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+  margin-top: 20px;
+
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 60px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 60px; /* Set a specific slider handle width */
+  height: 65px; /* Slider handle height */
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 60px; /* Set a specific slider handle width */
+  height: 65px; /* Slider handle height */
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
