@@ -1,48 +1,75 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Noise Machine </title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/noisemachine.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>  
 
   <body>
     <div id="banner">
-      <table align="center">
-        <tr>
-          <td>
-            <div class="slidecontainer">
-              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <form action="/rain" method="post">
-              <input type="image" src="/static/rain.jpg" value="Rain"></input>
-            </form>
-          </td>
-          <td>
-            <form action="/waves" method="post">
-              <input type="image" src="/static/waves.jpg" value="Waves"></input>
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <form action="/whitenoise" method="post">
-              <input type="image" src="/static/whitenoise.jpg" value="White Noise"></input>
-            </form>
-          </td>
+      <div class="content">
+        <table width="100%" align="center" class="audio">
+          <tr>
             <td>
-            <form action="/stop" method="post">
-              <input type="image" src="/static/stop.jpg" value="Stop"></input>
-            </form>
-          </td>
-        </tr>
-      </table>
+              <form action="/rain" method="post">
+                <input type="image" src="/static/rain.jpg" value="Rain"></input>
+              </form>
+            </td>
+            <td>
+              <form action="/waves" method="post">
+                <input type="image" src="/static/waves.jpg" value="Waves"></input>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form action="/whitenoise" method="post">
+                <input type="image" src="/static/whitenoise.jpg" value="White Noise"></input>
+              </form>
+            </td>
+              <td>
+              <form action="/stop" method="post">
+                <input type="image" src="/static/stop.jpg" value="Stop"></input>
+              </form>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" class="volume">
+          <tr>
+            <td>
+              <div class="slidecontainer">
+                <form id="volume" action="/stop" method="post">
+                  <input type="range" min="1" max="100" value="{{ volume }}" class="slider" id="range">
+                </form>
+              </div>
+            </td>
+            <td>
+              <div class="textcontainer">
+                <div class="range-value" id="rangeV"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="slidecontainer">
+              </div>
+            </td>
+            <td>
+              <div class="textcontainer">
+                <div class="range-value{% if muted %} hidden{% endif %}" id="mute">
+                  <img src="static/mute.png">
+                </div>
+                <div class="range-value{% if not muted %} hidden{% endif %}" id="unmute">
+                  <img src="static/unmute.png">
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </body>
 </html>
